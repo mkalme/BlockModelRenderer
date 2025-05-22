@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <Platforms>AnyCPU;x64</Platforms>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <AssemblyName>Block Model Viewer</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Icon\Icon_256px.ico" />
+    <None Remove="Resources\Image\WindowFrame\Close_16px.png" />
+    <None Remove="Resources\Image\WindowFrame\Maximize_16px.png" />
+    <None Remove="Resources\Image\WindowFrame\Minimize_16px.png" />
+    <None Remove="Resources\Image\WindowFrame\Normalize_16px.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Icon\Icon_256px.ico" />
+    <Resource Include="Resources\Image\WindowFrame\Close_16px.png" />
+    <Resource Include="Resources\Image\WindowFrame\Maximize_16px.png" />
+    <Resource Include="Resources\Image\WindowFrame\Minimize_16px.png" />
+    <Resource Include="Resources\Image\WindowFrame\Normalize_16px.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Model.Reader.Interop.Cs\Model.Reader.Interop.Cs.csproj" />
+    <ProjectReference Include="..\Model.Reader\Model.Reader.csproj" />
+    <ProjectReference Include="..\Model.Render\Model.Render.csproj" />
+  </ItemGroup>
+
+</Project>
